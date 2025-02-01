@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.scss";
 import { LuHouse, LuUserRound } from "react-icons/lu";
@@ -9,13 +9,29 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header id="home" className="header">
+        <header id="home" className={`header ${isScrolled ? "header--scrolled" : ""}`}>
             <h1 className="header__logo">{`{ILLIA.dev}`}</h1>
 
             <button className="header__burger" onClick={toggleMenu}>
@@ -26,7 +42,8 @@ const Header = () => {
                 <Link to="home" smooth={true} duration={500} className="header__link">
                     <LuHouse className="icon" />
                     Home
-                </Link><Link to="about" smooth={true} duration={500} className="header__link">
+                </Link>
+                <Link to="about" smooth={true} duration={500} className="header__link">
                     <LuUserRound className="icon" />
                     About me
                 </Link>

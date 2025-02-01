@@ -36,14 +36,14 @@ const stackItems = [
 
 const Stack = () => {
     useEffect(() => {
-        AOS.init({ duration: 800 });
+        AOS.init({ duration: 600 });
     }, []);
 
     return (
         <div className="stack">
             <div className="stack__wrapper" data-aos="fade-up" data-aos-delay="200">
-                <h1 className="title" data-aos="fade-up" data-aos-delay="400">I specialise in working with the following instruments</h1>
-                <div className="stack__container" data-aos="fade-up" data-aos-delay="600">
+                <h1 className="title" data-aos="fade-up" data-aos-delay="300">I specialise in working with the following instruments</h1>
+                <div className="stack__container" data-aos="fade-up" data-aos-delay="400">
                     {stackItems.map(({ label, Icon }) => (
                         <div key={label} className="stack__item" data-aos="fade-up" data-aos-delay="800">
                             <span className="stack__label">{label}</span>
