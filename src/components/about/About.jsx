@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './About.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import photo from '../../assets/image/photo.jpg';
 
 const About = () => {
-    useEffect(() => {
-        AOS.init({ duration: 600 });
-    }, []);
-
     return (
-        <div id="about" className="about" data-aos="fade-up">
+        <div id="about" className="about">
             <div className="about__wrapper">
                 <h1 className="title">
                     About me

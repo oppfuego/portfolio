@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Projects.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Zentry from '../../assets/image/zentry.png';
 import Reqops from '../../assets/image/reqops.png';
 import Virtual from '../../assets/image/virtual.png';
 
 const Projects = () => {
-    useEffect(() => {
-        AOS.init({ duration: 800 });
-    }, []);
-
     return (
         <div className="projects">
             <div className="projects__wrapper">
@@ -21,7 +15,7 @@ const Projects = () => {
                         { img: Virtual, link: 'https://virtual-r-gamma-coral.vercel.app/' },
                         { img: Zentry, link: 'https://virtual-r-gamma-coral.vercel.app/' }]
                         .map((project, index) => (
-                            <div className="projects__item" key={index} data-aos="zoom-in">
+                            <div className="projects__item" key={index}>
                                 <div className="projects__image-container">
                                     <img src={project.img} alt="project" className="projects__image"/>
                                     <div className="projects__overlay">
