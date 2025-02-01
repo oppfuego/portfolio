@@ -1,0 +1,126 @@
+.footer {
+  background-color: rgba(124, 124, 124, 0.1);
+  backdrop-filter: blur(250px);
+  color: #fff;
+  text-align: center;
+  padding: 25px 100px;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  font-size: 0.8rem;
+
+    @media (max-width: 768px) {
+        padding: 25px 30px;
+    }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__head{
+    display: flex;
+    text-align: left;
+    align-items: start;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    font-size: 32px;
+    background: linear-gradient(270deg, #ff89e9, #ffffff, #ff89e9);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 3s ease infinite;
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    @media (max-width: 1024px) {
+        padding: 0 30px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @media (480px) {
+        padding: 0;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__contact-data {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #eeccff;
+    }
+  }
+
+  &__text{
+    font-size: 1.3rem;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+    &--mod {
+      font-weight: 700;
+      background: linear-gradient(270deg, #ff89e9, #ffffff, #ff89e9);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 2s ease infinite;
+    }
+  }
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

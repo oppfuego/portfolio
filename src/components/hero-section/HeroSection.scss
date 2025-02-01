@@ -1,0 +1,132 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hero-section {
+  display: flex;
+  padding: 0 100px;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 100px;
+    justify-content: space-between;
+    backdrop-filter: blur(250px);
+    border-radius: 30px;
+    background-color: #ffffff1a;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      padding: 50px 30px;
+      gap: 30px;
+    }
+  }
+
+  &__left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    align-items: flex-start;
+  }
+
+  &__right-container {
+    display: flex;
+    width: 40%;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    &--mod {
+      color: #edaeff;
+      font-weight: bold;
+    }
+  }
+
+  &__typing {
+    display: inline-block;
+    font-size: 36px;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    .cursor {
+      display: inline-block;
+
+      animation: blink 0.75s step-end infinite;
+    }
+  }
+}
+
+.hand {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@media (max-width: 768px) {
+  .hero-section__coding-image{
+    display: none;
+  }
+
+}
