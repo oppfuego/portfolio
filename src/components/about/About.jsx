@@ -14,11 +14,9 @@ const About = () => {
                     <div className="about__right-container">
                         <div className="about__text-container">
                             <p className="about__text">
-                                I am a frontend developer specializing in React, TypeScript, and Firebase. I build
-                                intuitive
-                                and
-                                high-performance web applications, focusing on optimization, interactivity, and user
-                                experience.
+                                I am a frontend developer with 1.5 years of experience in commercial projects,
+                                specializing in React, TypeScript, and Firebase. I build intuitive and high-performance
+                                web applications, focusing on optimization, interactivity, and user experience.
                             </p>
                             <p className="about__text">
                                 Experienced in state management (Redux, Zustand), working with REST APIs and Firestore,
