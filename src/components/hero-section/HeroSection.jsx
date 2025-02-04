@@ -35,7 +35,7 @@ const HeroSection = () => {
     }, [index, isDeleting, delay, fullText]);
 
     return (
-        <div className="hero-section">
+        <div id="home" className="hero-section">
             <div className="hero-section__wrapper">
                 <div className="hero-section__left-container">
                     <h1 className="hero-section__title">

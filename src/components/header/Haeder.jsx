@@ -31,7 +31,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header id="home" className={`header ${isScrolled ? "header--scrolled" : ""}`}>
+        <header className={`header ${isScrolled ? "header--scrolled" : ""}`}>
             <h1 className="header__logo">{`{ILLIA.dev}`}</h1>
 
             <button className="header__burger" onClick={toggleMenu}>
